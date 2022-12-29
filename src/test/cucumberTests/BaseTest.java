@@ -7,15 +7,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import pages.MainPage;
 
 public class BaseTest {
-    private WebDriver webDriver;
-    public static MainPage mainPage;
+    protected static WebDriver webDriver;
 
     @Before
     public void beforeMethod() {
         System.setProperty("webdriver.chrome.driver", "C:\\Windows\\System32\\chromedriver.exe");
         webDriver = new ChromeDriver();
         webDriver.manage().window().maximize();
-        mainPage = new MainPage(webDriver);
+
     }
 
     @After

@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
 
-public class MainTest extends BaseTest {
+public class AmazonTest extends BaseTest {
 
     /**
      * TC001

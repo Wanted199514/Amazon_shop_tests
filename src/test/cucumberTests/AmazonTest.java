@@ -1,11 +1,13 @@
 package cucumberTests;
 
 import io.cucumber.java.en.*;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pages.*;
 
-public class MainTest {
-    MainPage mainPage = BaseTest.mainPage;
+public class AmazonTest {
+    private WebDriver webDriver = BaseTest.webDriver;
+    MainPage mainPage;
     SignInPage signInPage;
     SearchPage searchPage;
     NewItemPage newItemPage;
@@ -13,6 +15,7 @@ public class MainTest {
     ReturnAndOrdersPage returnAndOrdersPage;
     @When("Go to Amazon page")
     public void go_to_amazon_page() {
+        mainPage = new MainPage(webDriver);
         mainPage.openMainPage();
     }
 

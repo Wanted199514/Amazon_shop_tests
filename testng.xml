@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test name="MainTest">
         <classes>
-            <class name="tests.MainTest"></class>
+            <class name="tests.AmazonTest"></class>
         </classes>
     </test>
 </suite>
