@@ -6,7 +6,6 @@ import org.testng.Assert;
 import pages.*;
 
 public class AmazonTest {
-    private WebDriver webDriver = BaseTest.webDriver;
     MainPage mainPage;
     SignInPage signInPage;
     SearchPage searchPage;
@@ -15,7 +14,7 @@ public class AmazonTest {
     ReturnAndOrdersPage returnAndOrdersPage;
     @When("Go to Amazon page")
     public void go_to_amazon_page() {
-        mainPage = new MainPage(webDriver);
+        mainPage = new MainPage(BaseTest.webDriver);
         mainPage.openMainPage();
     }
 
