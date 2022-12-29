@@ -1,33 +1,16 @@
 package cucumberTests;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
-import io.cucumber.java.bs.A;
 import io.cucumber.java.en.*;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import pages.*;
 
 public class MainTest {
-    MainPage mainPage;
+    MainPage mainPage = BaseTest.mainPage;
     SignInPage signInPage;
     SearchPage searchPage;
     NewItemPage newItemPage;
     CartPage cartPage;
     ReturnAndOrdersPage returnAndOrdersPage;
-
-    private WebDriver webDriver;
-
-
-    @Before
-    public void beforeMethod() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Windows\\System32\\chromedriver.exe");
-        webDriver = new ChromeDriver();
-        webDriver.manage().window().maximize();
-        mainPage = new MainPage(webDriver);
-    }
-
     @When("Go to Amazon page")
     public void go_to_amazon_page() {
         mainPage.openMainPage();
@@ -195,10 +178,5 @@ public class MainTest {
         searchPage.scrollToProduct();
         searchPage.waitSecondProduct();
         searchPage.clickOnSecondProduct();
-    }
-
-    @After
-    public void afterMethod() {
-        webDriver.quit();
     }
 }
