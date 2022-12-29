@@ -1,7 +1,6 @@
 package cucumberTests;
 
 import io.cucumber.java.en.*;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pages.*;
 
